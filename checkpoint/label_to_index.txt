@@ -1,0 +1,1 @@
+{"almond": 0, "black_urad": 1, "cashew": 2, "masoor": 3, "moong": 4, "rajma": 5}

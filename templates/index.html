@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Lentils and Nuts Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+      <style>
+        body {
+              background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHNvW-P2MORrgsA_FY1VZV81Z8RTf9bEa80g6P727Z8oWpJ9avNpiUIGyMfHFe7t32qU&usqp=CAU');
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              }
+      </style>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'>Now predict the type of :</span><span class="heading_second">LENTILS and NUTS</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+            <!-- IPL Banner - 1 -->
+            <div class='ipl-banner-left'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-up">
+
+                        <!-- Image-1 -->
+
+
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='masoor3.jpeg') }}" alt="MasoorDal">
+                        </div>
+                        <!-- Image-2 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='masoor2.jpeg') }}" alt="MasoorDal">
+                        </div>
+                        <!-- Image-3 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='cashew4.jpeg') }}" alt="Cashew">
+                        </div>
+                        <!-- Image-4 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='cashew7.jpeg') }}" alt="Cashew">
+                        </div>
+                        <!-- Image-5 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='blackurad4.jpg') }}" alt="UradDal">
+                        </div>
+                        <!-- Image-6 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='blackurad9.jpeg') }}" alt="UradDal">
+                        </div>
+                        <!-- Image-7 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='rajma2.jpeg') }}" alt="Rajma">
+                        </div>
+                        <!-- Image-8 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='moong5.jpeg') }}" alt="MoongDal">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Prediction Form -->
+            <div class='div2'>
+                <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+
+                    <label for="my_image">Select a file:</label>
+                    <input type="file" name="my_image"><br><br>
+                    <!--<input type="submit">-->
+
+
+			             <input type="submit" class="myButton" value="Predict Score">
+        	</form>
+            </div>
+
+            <!-- IPL Banner - 2 -->
+            <div class='ipl-banner-right'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-down">
+
+                      <div class="image-container">
+                          <img class="image-width" src="{{ url_for('static', filename='masoor3.jpeg') }}" alt="MasoorDal">
+                      </div>
+                      <!-- Image-2 -->
+                      <div class="image-container">
+                          <img class="image-width" src="{{ url_for('static', filename='masoor2.jpeg') }}" alt="MasoorDal">
+                      </div>
+                      <!-- Image-3 -->
+                      <div class="image-container">
+                          <img class="image-width" src="{{ url_for('static', filename='cashew4.jpeg') }}" alt="Cashew">
+                      </div>
+                      <!-- Image-4 -->
+                      <div class="image-container">
+                          <img class="image-width" src="{{ url_for('static', filename='cashew7.jpeg') }}" alt="Cashew">
+                      </div>
+                      <!-- Image-5 -->
+                      <div class="image-container">
+                          <img class="image-width" src="{{ url_for('static', filename='blackurad4.jpg') }}" alt="UradDal">
+                      </div>
+                      <!-- Image-6 -->
+                      <div class="image-container">
+                          <img class="image-width" src="{{ url_for('static', filename='blackurad9.jpeg') }}" alt="UradDal">
+                      </div>
+                      <!-- Image-7 -->
+                      <div class="image-container">
+                          <img class="image-width" src="{{ url_for('static', filename='rajma2.jpeg') }}" alt="Rajma">
+                      </div>
+                      <!-- Image-8 -->
+                      <div class="image-container">
+                          <img class="image-width" src="{{ url_for('static', filename='moong5.jpeg') }}" alt="MoongDal">
+                      </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/SubhamIO"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/subham-sarkar-4224aa147/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://medium.com/@kingsubham27"><i class="fab fa-medium fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ❤️ by Subham Sarkar.</p>
+       </div>
+
+    </body>
+</html>
